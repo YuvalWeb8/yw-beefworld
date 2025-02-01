@@ -58,12 +58,12 @@ function changeLobby(lobby)
                 end
 
                 updateMenu()
-			else
-				if Config.Notification == 'codem-notification' then
-                	TriggerEvent('codem-notification:Create', "You are not gang member!", 'error', 'Lobby Notification', 5000)
-				elseif Config.Notification == 'qbcore' then
-					TriggerEvent('QBCore:Notify', "You are not gang member!", "error")
-				end
+		else
+		if Config.Notification == 'codem-notification' then
+			TriggerEvent('codem-notification:Create', "You are not gang member!", 'error', 'Lobby Notification', 5000)
+		elseif Config.Notification == 'qbcore' then
+			TriggerEvent('QBCore:Notify', "You are not gang member!", "error")
+		end
             end
         end, Config.GangScript)
     end
